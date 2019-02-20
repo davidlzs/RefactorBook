@@ -22,22 +22,20 @@ public class Customer {
 
     public String statement() {
         double totalAmount = 0;
-        int frequentReterPoints = 0;
+        int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
         String result = "Rental Record for " + getName() + "\n";
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement();
 
-            frequentReterPoints ++;
-            if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1)
-                frequentReterPoints++;
+            frequentRenterPoints += each.getFrequentRenterPoints();
 
             result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
             totalAmount += each.getCharge();
         }
 
         result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
-        result += "You earched " + String.valueOf(frequentReterPoints) + " frequent renter points";
+        result += "You earched " + String.valueOf(frequentRenterPoints) + " frequent renter points";
         return result;
     }
 
