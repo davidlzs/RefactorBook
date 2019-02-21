@@ -31,7 +31,7 @@ public class Customer {
         }
 
         result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
-        result += "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
+        result += "You earched " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
         return result;
     }
 
@@ -46,7 +46,7 @@ public class Customer {
         }
 
         result += "<p>Amount owed is <em>" + String.valueOf(getTotalCharge()) + "</em><p>";
-        result += "You earned <em>" + String.valueOf(getTotalFrequentRenterPoints()) + "</em> frequent renter points<p>";
+        result += "You earched <em>" + String.valueOf(getTotalFrequentRenterPoints()) + "</em> frequent renter points<p>";
         return result;
     }
 
