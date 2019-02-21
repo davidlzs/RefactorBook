@@ -1,4 +1,4 @@
-package com.dliu.refactor.domain;
+package com.dliu.refactoring.chapter4;
 
 public class RegularPrice extends Price {
     public int getPriceCode() {

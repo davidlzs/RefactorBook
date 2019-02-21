@@ -1,4 +1,4 @@
-package com.dliu.refactor.domain;
+package com.dliu.refactoring.chapter4;
 
 public class Movie {
     public static final int CHILDREN = 2;

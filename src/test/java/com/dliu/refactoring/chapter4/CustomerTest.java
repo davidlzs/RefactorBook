@@ -1,8 +1,8 @@
-package com.dliu.refactor.domain;
+package com.dliu.refactoring.chapter4;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CustomerTest {
     @Test
