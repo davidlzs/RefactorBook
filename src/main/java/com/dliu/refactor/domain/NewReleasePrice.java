@@ -1,6 +1,6 @@
 package com.dliu.refactor.domain;
 
-public class NewReleasePrice implements Price {
+public class NewReleasePrice extends Price {
     public int getPriceCode() {
         return Movie.NEW_RELEASE;
     }

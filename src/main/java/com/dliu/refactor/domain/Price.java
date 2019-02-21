@@ -1,5 +1,5 @@
 package com.dliu.refactor.domain;
 
-public interface Price {
-    int getPriceCode();
+public abstract class Price {
+    abstract int getPriceCode();
 }
