@@ -3,24 +3,22 @@ package com.dliu.refactoring.chapter6.extractmethod;
 import com.dliu.refactoring.GenericTestUtils;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public class CustomerTest {
     @Test
-    public void printOwning() {
+    public void printOwing() {
         // setup
-        String expected = "Summary:\r\n" +
-                "name:Home Inc.\r\n" +
-                "amount:200.0\r\n";
         Customer customer = new Customer("Home Inc.");
         GenericTestUtils.LogCapturer logCapturer = GenericTestUtils.LogCapturer.captureLogs(Customer.logger);
 
         // execute
-        customer.printOwning(200.0d);
+        customer.printOwing(200.0d);
 
         // assert
         logCapturer.stopCapturing();
-        assertEquals(expected, logCapturer.getOutput());
+        assertTrue(logCapturer.getOutput().contains("name:Home Inc."));
+        assertTrue(logCapturer.getOutput().contains("amount:200.0"));
         logCapturer.clearOutput();
     }
 }

@@ -12,7 +12,7 @@ public class Customer {
         this._name = _name;
     }
 
-    void printOwning(double amount) {
+    void printOwing(double amount) {
         printBanner();
         printDetails(amount);
 
@@ -25,6 +25,10 @@ public class Customer {
     }
 
     private void printBanner() {
-        logger.info("Summary:");
+
+        logger.info("********************************");
+        logger.info("******** Customer Owes *********");
+        logger.info("********************************");
+
     }
 }
