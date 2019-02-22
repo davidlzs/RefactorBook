@@ -14,7 +14,11 @@ public class Customer {
 
     void printOwning(double amount) {
         printBanner();
+        printDetails(amount);
 
+    }
+
+    private void printDetails(double amount) {
         //print details
         logger.info("name:" + _name);
         logger.info("amount:" + amount);
